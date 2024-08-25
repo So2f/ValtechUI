@@ -1,0 +1,55 @@
+.banner {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 560px;
+  border: 2px solid black;
+}
+
+.bannerContainer {
+  position: relative;
+  width: 1196px;
+  height: 560px;
+  border: 2px solid red;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1196px;
+  height: 480px;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+}
+
+.textContent {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  text-align: right;
+  color: white;
+}
+
+.textContent h1 {
+  margin: 0;
+  color: #171717;
+}
+
+.textContent p {
+  margin: 5px 0;
+  color: #171717;
+}
+
+.foregroundImageContainer {
+  position: absolute;
+  height: 560px;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+}

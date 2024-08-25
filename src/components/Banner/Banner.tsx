@@ -20,9 +20,9 @@ const Banner = () => {
           }}
         >
           <div className={styles.textContent}>
-            <h1>{heroContent.title}</h1>
-            <p>{heroContent.subtitle}</p>
-            <p>{heroContent.description}</p>
+            <h1 className="heading-large">{heroContent.title}</h1>
+            <p className="text-large">{heroContent.subtitle}</p>
+            <p className="text-large">{heroContent.description}</p>
           </div>
         </div>
 
