@@ -1,9 +1,14 @@
+"use client";
+import Banner from "@/components/Banner/Banner";
 import styles from "./page.module.css";
+import ContentProviderWrapper from "./ContentProviderWrapper";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      Valtech Front Challenge
-    </main>
+    <ContentProviderWrapper>
+      <main className={styles.main}>
+        <Banner />
+      </main>
+    </ContentProviderWrapper>
   );
 }
