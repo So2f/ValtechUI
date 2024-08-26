@@ -44,7 +44,7 @@ const CardSection = () => {
                   </div>
 
                   <div className={styles.buttonContainer}>
-                    <Link href="/details" className={styles.button}>
+                    <Link href="/detail" className={styles.button}>
                       Explore More
                     </Link>
                   </div>

@@ -36,3 +36,42 @@
   font-weight: 400;
   font-size: 16px;
 }
+
+.header {
+  height: 100px;
+  background-color: #ff5959;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 120px;
+}
+
+/* Responsive adjustments */
+
+/* For screens 1024px and below */
+@media (max-width: 1024px) {
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+}
+
+/* For screens 480px and below add margin auto to fix center pb */
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+}
