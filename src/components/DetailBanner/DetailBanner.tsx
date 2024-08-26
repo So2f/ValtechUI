@@ -1,18 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./detailBanner.module.css"; // Import the CSS module
-import { useArticleContent } from "@/context/ArticleContext"; // Import the context
+import styles from "./detailBanner.module.css";
+import { useArticleContent } from "@/context/ArticleContext";
 
 const DetailBanner = () => {
-  // Access the article data from the context
   const articleContent = useArticleContent();
 
-  // Extract relevant content types
   const heroContent = articleContent?.content.find(
     (item) => item.type === "HERO_ARTICLE"
   );
 
-  // Return null if no hero content is found
   if (!heroContent) return null;
 
   return (

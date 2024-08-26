@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "./carousel.module.css"; // Import the CSS module
-import leftArrow from "@/assets/images/arrow.svg"; // Import the SVG arrow
-import rightArrow from "@/assets/images/arrow.svg"; // Same SVG flipped for right arrow
+import styles from "./carousel.module.css";
+import leftArrow from "@/assets/images/arrow.svg";
+import rightArrow from "@/assets/images/arrow.svg";
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
