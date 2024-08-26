@@ -24,6 +24,7 @@
 
 .rightArrow {
   right: 39px;
+  transform: scaleX(-1);
 }
 
 .carouselImage {

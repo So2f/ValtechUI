@@ -10,6 +10,7 @@ import {
 import Carousel from "@/components/Carousel/Carousel";
 import DetailBanner from "@/components/DetailBanner/DetailBanner";
 import SanitizedHtml from "@/utils/domPurifyHelper";
+import Arrow from "@/assets/images/arrow.svg";
 
 const DetailPage = () => {
   const articleContent = useArticleContent();
@@ -54,7 +55,10 @@ const DetailPage = () => {
             marginTop: "80px",
           }}
         >
-          <p>Back</p>
+          <div style={{ display: "flex" }}>
+            <Image src={Arrow} alt="alt" width={20} height={20} />
+            <p style={{ marginLeft: "10px" }}>Back</p>
+          </div>
         </div>
 
         {/* Banner */}
