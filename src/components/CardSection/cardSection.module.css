@@ -31,7 +31,6 @@
   transition: all 0.3s ease;
   height: 479px;
   overflow: hidden;
-  border: 2px solid black;
 }
 
 .card.largeCard {
@@ -77,15 +76,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid black;
+  transition: all 0.4s ease;
+  max-width: 225px;
 }
 
 .titleSubtitle p {
   font-size: 24px;
   color: black;
   font-weight: normal;
-  border: 2px solid black;
 }
 
 .titleSubtitle p:last-child {
@@ -131,10 +129,13 @@
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease, border 0.3s ease;
-  border: 2px solid black;
 }
 
 .button:hover {
   background-color: #ff5959;
   border: none;
+}
+
+.card.largeCard .cardContent {
+  max-width: 500px;
 }
