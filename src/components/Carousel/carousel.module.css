@@ -1,0 +1,49 @@
+.carouselContainer {
+  position: relative;
+  width: 1195px;
+  height: 400px;
+  margin-top: 80px;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.leftArrow {
+  left: 39px;
+}
+
+.rightArrow {
+  right: 39px;
+}
+
+.carouselImage {
+  position: relative;
+  z-index: 1;
+}
+
+.descriptionContainer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 60px;
+  right: 120px;
+  color: black;
+  z-index: 2;
+  max-width: 580px;
+  text-align: right;
+}
+
+.arrowIcon {
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
