@@ -9,6 +9,7 @@ import {
 } from "@/context/ArticleContext";
 import Carousel from "@/components/Carousel/Carousel";
 import DetailBanner from "@/components/DetailBanner/DetailBanner";
+import SanitizedHtml from "@/utils/domPurifyHelper";
 
 const DetailPage = () => {
   const articleContent = useArticleContent();
@@ -60,6 +61,14 @@ const DetailPage = () => {
         <div>
           <DetailBanner />
         </div>
+
+        {/* Highlighted Paragraph
+        <div>
+          {highlightedParagraph && (
+            <SanitizedHtml htmlContent={highlightedParagraph.text} />
+          )}
+        </div> */}
+
         <div>
           {/* Carousel */}
           {carouselContent && <Carousel items={carouselContent.items} />}
