@@ -33,7 +33,7 @@ const Banner = () => {
               alt={heroContent.foregroundAsset.alt || "Foreground image"}
               width={345}
               height={560}
-              layout="intrinsic"
+              layout="responsive"
               objectFit="contain"
             />
           </div>

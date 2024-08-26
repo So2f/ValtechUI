@@ -35,7 +35,7 @@ const CardSection = () => {
               >
                 <div className={styles.cardContent}>
                   <div className={styles.titleSubtitle}>
-                    <p style={{ marginBottom: "20px" }}>{card.subtitle}</p>
+                    <p>{card.subtitle}</p>
                     <p>{card.title}</p>
                   </div>
 

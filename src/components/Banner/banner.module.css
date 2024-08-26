@@ -8,8 +8,6 @@
   max-height: 560px;
 }
 
-/* fixed the container responsive pb here  */
-
 .bannerContainer {
   position: relative;
   width: 100%;
@@ -50,8 +48,95 @@
 
 .foregroundImageContainer {
   position: absolute;
-  height: 560px;
   top: 50%;
-  left: 120px;
   transform: translateY(-50%);
+  left: 120px;
+  width: 345px;
+  height: 560px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .bannerContainer {
+    /* margin-top: 100px; */
+    /* height: auto; */
+    max-width: 90%;
+  }
+
+  .backgroundImage {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .foregroundImageContainer {
+    left: 40px;
+  }
+
+  .textContent {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .textContent h1 {
+    font-size: 28px;
+  }
+
+  .textContent p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .backgroundImage {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .foregroundImageContainer {
+    width: 345px;
+    left: 40px;
+  }
+
+  .textContent {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .textContent h1 {
+    font-size: 24px;
+  }
+
+  .textContent p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContainer {
+    height: 250px;
+  }
+
+  .backgroundImage {
+    height: 200px;
+    max-width: 100%;
+  }
+
+  .foregroundImageContainer {
+    width: auto;
+    display: flex;
+    height: 250px;
+  }
+
+  .textContent {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .textContent h1 {
+    font-size: 20px;
+  }
+
+  .textContent p {
+    font-size: 12px;
+  }
 }
