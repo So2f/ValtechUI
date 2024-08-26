@@ -62,16 +62,68 @@ const DetailPage = () => {
           <DetailBanner />
         </div>
 
-        {/* Highlighted Paragraph
+        {/* Author div */}
         <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              fontStyle: "italic",
+              marginTop: "80px",
+            }}
+          >
+            <p>{heroContent?.publishingDate}</p>
+            <p>Author: {heroContent?.author}</p>
+          </div>
+        </div>
+
+        {/* Highlighted Paragraph */}
+        <div style={{ marginTop: "80px" }}>
           {highlightedParagraph && (
             <SanitizedHtml htmlContent={highlightedParagraph.text} />
           )}
-        </div> */}
+        </div>
 
+        {/* Not highlighted Paragraph */}
+        <div
+          style={{
+            maxWidth: "954px",
+            display: "flex",
+            justifyContent: "center",
+            margin: "0 auto",
+          }}
+        >
+          {regularParagraph && (
+            <div className="text-large" style={{ marginTop: "80px" }}>
+              <SanitizedHtml htmlContent={regularParagraph.text} />
+            </div>
+          )}
+        </div>
+
+        {/* Carousel */}
         <div>
-          {/* Carousel */}
           {carouselContent && <Carousel items={carouselContent.items} />}
+        </div>
+
+        {/* Last Paragraph */}
+        <div
+          style={{
+            maxWidth: "954px",
+            display: "flex",
+            justifyContent: "center",
+            margin: "0 auto",
+          }}
+        >
+          {lastParagraph && (
+            <div
+              className="text-large"
+              style={{
+                marginTop: "80px",
+              }}
+            >
+              <SanitizedHtml htmlContent={lastParagraph.text} />
+            </div>
+          )}
         </div>
       </div>
     </div>
