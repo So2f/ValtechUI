@@ -9,10 +9,6 @@ export default function Home() {
     <ContentProviderWrapper>
       <main className={styles.main}>
         <Banner />
-<<<<<<< HEAD
-=======
-
->>>>>>> 6b37cc560f1aeef747c8a30b76f99547be01fade
         <CardSection />
       </main>
     </ContentProviderWrapper>

@@ -1,11 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useContent } from "../../context/IndexContext";
-<<<<<<< HEAD
 import styles from "./cardSection.module.css";
-=======
-import styles from "./cardSection.module.css"; // Import the CSS module
->>>>>>> 6b37cc560f1aeef747c8a30b76f99547be01fade
 
 const CardSection = () => {
   const { content } = useContent();
@@ -23,22 +19,14 @@ const CardSection = () => {
 
         <div className={styles.cardGrid}>
           {cardGridContent.cards?.map((card, index) => {
-<<<<<<< HEAD
             const isLargeCard = index === 0 || index === 5;
-=======
-            const isLargeCard = index === 0 || index === 5; // Apply largeCard to the 1st and 6th cards
->>>>>>> 6b37cc560f1aeef747c8a30b76f99547be01fade
 
             return (
               <div
                 key={index}
                 className={`${styles.card} ${
                   isLargeCard ? styles.largeCard : styles.smallCard
-<<<<<<< HEAD
                 }`}
-=======
-                }`} // Apply largeCard or smallCard class conditionally
->>>>>>> 6b37cc560f1aeef747c8a30b76f99547be01fade
                 style={{
                   backgroundImage: `url(https://placehold.co/${
                     isLargeCard ? 588 : 284
