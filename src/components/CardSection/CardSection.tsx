@@ -35,8 +35,8 @@ const CardSection = () => {
               >
                 <div className={styles.cardContent}>
                   <div className={styles.titleSubtitle}>
-                    <p>{card.subtitle}</p>
-                    <p>{card.title}</p>
+                    <h2 className="text-large">{card.subtitle}</h2>
+                    <h3 className="heading-small">{card.title}</h3>
                   </div>
 
                   <div className={styles.descriptionContainer}>
