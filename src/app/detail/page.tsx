@@ -2,6 +2,7 @@
 
 import React from 'react';
 import '../../app/globals.css';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useArticleContent } from '@/context/ArticleContext';
 import Carousel from '@/components/Carousel/Carousel';
@@ -39,7 +40,9 @@ const DetailPage = () => {
       <div className={styles.content}>
         <div className={styles.topMargin}>
           <div className={styles.flexRow}>
-            <Image src={Arrow} alt="alt" width={20} height={20} />
+            <Link href="/">
+              <Image src={Arrow} alt="alt" width={20} height={20} />
+            </Link>
             <p className={styles.backText}>Back</p>
           </div>
         </div>
