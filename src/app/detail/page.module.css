@@ -12,7 +12,6 @@
 
 .flexRow {
   display: flex;
-  align-items: center;
 }
 
 .backText {
@@ -56,10 +55,6 @@
 }
 
 @media (max-width: 480px) {
-  .content {
-    padding-top: 40px;
-  }
-
   .regularParagraphContainer,
   .lastParagraphContainer {
     max-width: 80%;
@@ -69,11 +64,15 @@
   .regularParagraph,
   .lastParagraph {
     font-size: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .highlightedParagraph {
     font-size: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
+  }
+
+  .flexRow {
+    font-size: 12px;
   }
 }

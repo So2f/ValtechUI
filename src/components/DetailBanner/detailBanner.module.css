@@ -1,6 +1,6 @@
 .bannerContainer {
   display: flex;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .backgroundContainer {
@@ -73,5 +73,9 @@
 
   .title {
     font-size: 10px;
+  }
+
+  .bannerContainer {
+    margin-top: 30px;
   }
 }

@@ -37,11 +37,11 @@ const DetailPage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <main className={styles.content}>
         <div className={styles.topMargin}>
-          <div className={styles.flexRow}>
+          <div className={`${styles.flexRow} text-large`}>
             <Link href="/">
-              <Image src={Arrow} alt="alt" width={20} height={20} />
+              <Image src={Arrow} alt="Back Button" width={20} height={15} />
             </Link>
             <p className={styles.backText}>Back</p>
           </div>
@@ -61,7 +61,7 @@ const DetailPage = () => {
         </div>
 
         {/* Highlighted Paragraph */}
-        <div
+        <blockquote
           className={`${styles.highlightedParagraph} heading-medium`}
           dangerouslySetInnerHTML={{
             __html: highlightedParagraph?.text || '',
@@ -70,7 +70,7 @@ const DetailPage = () => {
 
         {/* Not highlighted Paragraph */}
         <div className={styles.regularParagraphContainer}>
-          <div
+          <h2
             className={`${styles.regularParagraph} text-large`}
             dangerouslySetInnerHTML={{
               __html: regularParagraph?.text || '',
@@ -87,14 +87,14 @@ const DetailPage = () => {
 
         {/* Last Paragraph */}
         <div className={styles.lastParagraphContainer}>
-          <div
+          <h2
             className={`${styles.lastParagraph} text-large`}
             dangerouslySetInnerHTML={{
               __html: lastParagraph?.text || '',
             }}
           />
         </div>
-      </div>
+      </main>
     </div>
   );
 };
