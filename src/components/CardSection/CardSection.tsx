@@ -1,13 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { useContent } from "../../context/IndexContext";
-import styles from "./cardSection.module.css";
+import React from 'react';
+import Link from 'next/link';
+import { useContent } from '../../context/IndexContext';
+import styles from './cardSection.module.css';
 
 const CardSection = () => {
   const { content } = useContent();
 
   const cardGridContent = content.find(
-    (section) => section.type === "CARD_GRID"
+    (section) => section.type === 'CARD_GRID'
   );
 
   if (!cardGridContent) return null;

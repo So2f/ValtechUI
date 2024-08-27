@@ -8,6 +8,7 @@ import Carousel from '@/components/Carousel/Carousel';
 import DetailBanner from '@/components/DetailBanner/DetailBanner';
 import Arrow from '@/assets/images/arrow.svg';
 import styles from './page.module.css';
+import { CarouselItem } from '@/types/types';
 
 const DetailPage = () => {
   const articleContent = useArticleContent();
@@ -50,7 +51,7 @@ const DetailPage = () => {
 
         {/* Author div */}
         <div>
-          <div className={styles.authorContainer}>
+          <div className={`${styles.authorContainer} text-small`}>
             <p>{heroContent?.publishingDate}</p>
             <p>Author: {heroContent?.author}</p>
           </div>
@@ -58,7 +59,7 @@ const DetailPage = () => {
 
         {/* Highlighted Paragraph */}
         <div
-          className={styles.highlightedParagraph}
+          className={`${styles.highlightedParagraph} heading-medium`}
           dangerouslySetInnerHTML={{
             __html: highlightedParagraph?.text || '',
           }}
@@ -76,7 +77,9 @@ const DetailPage = () => {
 
         {/* Carousel */}
         <div>
-          {carouselContent && <Carousel items={carouselContent.items} />}
+          {carouselContent && (
+            <Carousel items={carouselContent.items as CarouselItem[]} />
+          )}
         </div>
 
         {/* Last Paragraph */}

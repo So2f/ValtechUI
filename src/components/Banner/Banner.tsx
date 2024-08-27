@@ -1,12 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import { useContent } from "../../context/IndexContext";
-import styles from "./banner.module.css";
+import React from 'react';
+import Image from 'next/image';
+import { useContent } from '../../context/IndexContext';
+import styles from './banner.module.css';
 
 const Banner = () => {
   const { content } = useContent();
 
-  const heroContent = content.find((section) => section.type === "HERO");
+  const heroContent = content.find((section) => section.type === 'HERO');
 
   if (!heroContent) return null;
 
@@ -16,7 +16,7 @@ const Banner = () => {
         <div
           className={styles.backgroundImage}
           style={{
-            backgroundImage: `url(${heroContent.backgroundAsset?.url || ""})`,
+            backgroundImage: `url(${heroContent.backgroundAsset?.url || ''})`,
           }}
         >
           <div className={styles.textContent}>
@@ -30,7 +30,7 @@ const Banner = () => {
           <div className={styles.foregroundImageContainer}>
             <Image
               src={`${heroContent.foregroundAsset?.url}/png`}
-              alt={heroContent.foregroundAsset.alt || "Foreground image"}
+              alt={heroContent.foregroundAsset.alt || 'Foreground image'}
               layout="fill"
               className={styles.foregroundImage}
             />

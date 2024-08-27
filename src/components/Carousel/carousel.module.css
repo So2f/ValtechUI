@@ -3,6 +3,17 @@
   width: 1195px;
   height: 400px;
   margin-top: 80px;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselSlide {
+  min-width: 100%;
+  height: 100%;
 }
 
 .arrowButton {
@@ -24,7 +35,7 @@
 
 .rightArrow {
   right: 40px;
-  transform: translateY(-50%) scaleX(-1); /* Flip the right arrow horizontally */
+  transform: translateY(-50%) scaleX(-1);
 }
 
 .carouselImage {
@@ -43,6 +54,12 @@
   max-width: 580px;
   font-size: 14px;
   text-align: right;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.descriptionContainer.fade-out {
+  opacity: 0;
 }
 
 .arrowIcon {

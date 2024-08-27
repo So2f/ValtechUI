@@ -19,25 +19,17 @@
   margin-left: 10px;
 }
 
-.authorContainer,
-.regularParagraphContainer,
-.lastParagraphContainer {
+.authorContainer {
   display: flex;
   justify-content: space-between;
-  font-style: italic;
   margin-top: 80px;
-}
-
-.authorContainer {
-  justify-content: space-between;
+  font-style: italic;
 }
 
 .regularParagraphContainer,
 .lastParagraphContainer {
   max-width: 954px;
   margin: 0 auto;
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .highlightedParagraph,
@@ -76,7 +68,7 @@
   .authorContainer,
   .regularParagraph,
   .lastParagraph {
-    font-size: 14px;
+    font-size: 8px;
   }
 
   .highlightedParagraph {

@@ -1,5 +1,5 @@
-import React, { createContext, useContext, ReactNode } from "react";
-import indexData from "../data/index.json"; // Import your JSON data
+import React, { createContext, useContext, ReactNode } from 'react';
+import indexData from '../data/index.json'; // Import your JSON data
 
 type ContentType = typeof indexData;
 

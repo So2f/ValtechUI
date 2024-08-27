@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { ContentProvider } from "../context/IndexContext";
+import React from 'react';
+import { ContentProvider } from '../context/IndexContext';
 
 export default function ContentProviderWrapper({
   children,
