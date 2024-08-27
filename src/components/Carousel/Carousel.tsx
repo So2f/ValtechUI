@@ -20,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         prevIndex === 0 ? items.length - 1 : prevIndex - 1
       );
       setFadeOut(false);
-    }, 500); // Match the timeout duration with the CSS transition duration
+    }, 500);
   };
 
   const handleNextClick = () => {
@@ -30,7 +30,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         prevIndex === items.length - 1 ? 0 : prevIndex + 1
       );
       setFadeOut(false);
-    }, 500); // Match the timeout duration with the CSS transition duration
+    }, 500);
   };
 
   const translateX = -currentIndex * 100;
