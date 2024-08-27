@@ -24,13 +24,54 @@
   text-align: right;
 }
 
-.subtitle {
+.subtitle,
+.title {
   margin: 0;
+}
+
+.subtitle {
   margin-bottom: 24px;
 }
 
 .title {
-  margin: 0;
   font-weight: normal;
   font-size: 31px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .backgroundContainer {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sideImage {
+    width: 40%;
+    height: 150px;
+  }
+
+  .textContainer {
+    left: 20px;
+    width: 200px;
+  }
+
+  .subtitle {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContainer {
+    left: 70px;
+    width: 100px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
 }

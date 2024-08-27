@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1196px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.backText {
+  margin-left: 10px;
+}
+
+.authorContainer,
+.regularParagraphContainer,
+.lastParagraphContainer {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  margin-top: 80px;
+}
+
+.authorContainer {
+  justify-content: space-between;
+}
+
+.regularParagraphContainer,
+.lastParagraphContainer {
+  max-width: 954px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.highlightedParagraph,
+.regularParagraph,
+.lastParagraph {
+  margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    max-width: 80%;
+    margin: 0 20px;
+  }
+
+  .authorContainer,
+  .regularParagraphContainer,
+  .lastParagraphContainer {
+    font-size: 14px;
+  }
+
+  .highlightedParagraph {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-top: 40px;
+  }
+
+  .regularParagraphContainer,
+  .lastParagraphContainer {
+    max-width: 80%;
+  }
+
+  .authorContainer,
+  .regularParagraph,
+  .lastParagraph {
+    font-size: 14px;
+  }
+
+  .highlightedParagraph {
+    font-size: 10px;
+  }
+}

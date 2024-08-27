@@ -19,6 +19,7 @@ const DetailBanner = () => {
         alt="Side Image"
         width={466}
         height={480}
+        className={styles.sideImage}
       />
       <div className={styles.backgroundContainer}>
         <Image

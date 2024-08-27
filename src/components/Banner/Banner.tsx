@@ -31,10 +31,8 @@ const Banner = () => {
             <Image
               src={`${heroContent.foregroundAsset?.url}/png`}
               alt={heroContent.foregroundAsset.alt || "Foreground image"}
-              width={345}
-              height={560}
-              layout="responsive"
-              objectFit="contain"
+              layout="fill"
+              className={styles.foregroundImage}
             />
           </div>
         )}

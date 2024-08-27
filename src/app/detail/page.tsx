@@ -1,63 +1,45 @@
-"use client"; //why use client ?
+'use client';
 
-import React from "react";
-import "../../app/globals.css";
-import Image from "next/image";
-import {
-  useArticleContent,
-  ArticleContentProvider,
-} from "@/context/ArticleContext";
-import Carousel from "@/components/Carousel/Carousel";
-import DetailBanner from "@/components/DetailBanner/DetailBanner";
-import SanitizedHtml from "@/utils/domPurifyHelper";
-import Arrow from "@/assets/images/arrow.svg";
+import React from 'react';
+import '../../app/globals.css';
+import Image from 'next/image';
+import { useArticleContent } from '@/context/ArticleContext';
+import Carousel from '@/components/Carousel/Carousel';
+import DetailBanner from '@/components/DetailBanner/DetailBanner';
+import Arrow from '@/assets/images/arrow.svg';
+import styles from './page.module.css';
 
 const DetailPage = () => {
   const articleContent = useArticleContent();
   if (!articleContent) return <p>Loading...</p>;
 
   const heroContent = articleContent.content.find(
-    (item) => item.type === "HERO_ARTICLE"
+    (item) => item.type === 'HERO_ARTICLE'
   );
 
   const highlightedParagraph = articleContent.content.find(
-    (item) => item.type === "PARAGRAPH" && item.highlight
+    (item) => item.type === 'PARAGRAPH' && item.highlight
   );
 
   const regularParagraph = articleContent.content.find(
-    (item) => item.type === "PARAGRAPH" && !item.highlight
+    (item) => item.type === 'PARAGRAPH' && !item.highlight
   );
 
   const carouselContent = articleContent.content.find(
-    (item) => item.type === "CAROUSEL"
+    (item) => item.type === 'CAROUSEL'
   );
 
   const lastParagraph = articleContent.content.filter(
-    (item) => item.type === "PARAGRAPH" && !item.highlight
+    (item) => item.type === 'PARAGRAPH' && !item.highlight
   )[1];
 
-  const img = "https://placehold.co/466x480/D1D3CA/D1D3CA/png";
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1196px",
-          width: "100%",
-        }}
-      >
-        <div
-          style={{
-            marginTop: "80px",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.topMargin}>
+          <div className={styles.flexRow}>
             <Image src={Arrow} alt="alt" width={20} height={20} />
-            <p style={{ marginLeft: "10px" }}>Back</p>
+            <p className={styles.backText}>Back</p>
           </div>
         </div>
 
@@ -68,40 +50,28 @@ const DetailPage = () => {
 
         {/* Author div */}
         <div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              fontStyle: "italic",
-              marginTop: "80px",
-            }}
-          >
+          <div className={styles.authorContainer}>
             <p>{heroContent?.publishingDate}</p>
             <p>Author: {heroContent?.author}</p>
           </div>
         </div>
 
         {/* Highlighted Paragraph */}
-        <div style={{ marginTop: "80px" }}>
-          {highlightedParagraph && (
-            <SanitizedHtml htmlContent={highlightedParagraph.text} />
-          )}
-        </div>
+        <div
+          className={styles.highlightedParagraph}
+          dangerouslySetInnerHTML={{
+            __html: highlightedParagraph?.text || '',
+          }}
+        />
 
         {/* Not highlighted Paragraph */}
-        <div
-          style={{
-            maxWidth: "954px",
-            display: "flex",
-            justifyContent: "center",
-            margin: "0 auto",
-          }}
-        >
-          {regularParagraph && (
-            <div className="text-large" style={{ marginTop: "80px" }}>
-              <SanitizedHtml htmlContent={regularParagraph.text} />
-            </div>
-          )}
+        <div className={styles.regularParagraphContainer}>
+          <div
+            className={`${styles.regularParagraph} text-large`}
+            dangerouslySetInnerHTML={{
+              __html: regularParagraph?.text || '',
+            }}
+          />
         </div>
 
         {/* Carousel */}
@@ -110,24 +80,13 @@ const DetailPage = () => {
         </div>
 
         {/* Last Paragraph */}
-        <div
-          style={{
-            maxWidth: "954px",
-            display: "flex",
-            justifyContent: "center",
-            margin: "0 auto",
-          }}
-        >
-          {lastParagraph && (
-            <div
-              className="text-large"
-              style={{
-                marginTop: "80px",
-              }}
-            >
-              <SanitizedHtml htmlContent={lastParagraph.text} />
-            </div>
-          )}
+        <div className={styles.lastParagraphContainer}>
+          <div
+            className={`${styles.lastParagraph} text-large`}
+            dangerouslySetInnerHTML={{
+              __html: lastParagraph?.text || '',
+            }}
+          />
         </div>
       </div>
     </div>
