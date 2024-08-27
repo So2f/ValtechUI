@@ -44,7 +44,11 @@ const CardSection = () => {
                   </div>
 
                   <div className={styles.buttonContainer}>
-                    <Link href="/detail" className={styles.button}>
+                    <Link
+                      href="/detail"
+                      className={styles.button}
+                      aria-label={`Explore more about ${card.title}`}
+                    >
                       Explore More
                     </Link>
                   </div>
