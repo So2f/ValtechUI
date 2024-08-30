@@ -15,7 +15,6 @@ describe('CardSection', () => {
       throw new Error('CARD_GRID section not found in index.json');
     }
 
-    // Check if the section title "Valtech Offices" is rendered
     expect(screen.getByText(cardGridContent.title)).toBeInTheDocument();
   });
 
@@ -31,8 +30,6 @@ describe('CardSection', () => {
     const button = screen.getByLabelText(
       `Explore more about ${firstCard.title}`
     );
-
-    // console.log('first card ==', firstCard);
 
     expect(button).toHaveAttribute('href', '/detail');
   });
