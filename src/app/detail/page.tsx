@@ -38,21 +38,17 @@ const DetailPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.content}>
-        <div className={styles.topMargin}>
-          <div className={`${styles.flexRow} text-large`}>
-            <Link href="/">
-              <Image src={Arrow} alt="Back Button" width={20} height={15} />
-            </Link>
-            <p className={styles.backText}>Back</p>
-          </div>
+        <div className={`${styles.flexRow} text-large`}>
+          <Link href="/">
+            <Image src={Arrow} alt="Back Button" width={25} height={20} />
+          </Link>
+          <p className={styles.backText}>Back</p>
         </div>
 
-        {/* Banner */}
         <div>
           <DetailBanner />
         </div>
 
-        {/* Author div */}
         <div>
           <div className={`${styles.authorContainer} text-small`}>
             <p>{heroContent?.publishingDate}</p>
@@ -60,15 +56,15 @@ const DetailPage = () => {
           </div>
         </div>
 
-        {/* Highlighted Paragraph */}
-        <blockquote
-          className={`${styles.highlightedParagraph} heading-medium`}
-          dangerouslySetInnerHTML={{
-            __html: highlightedParagraph?.text || '',
-          }}
-        />
+        <div>
+          <h1
+            className={`${styles.highlightedParagraph} heading-medium`}
+            dangerouslySetInnerHTML={{
+              __html: highlightedParagraph?.text || '',
+            }}
+          />
+        </div>
 
-        {/* Not highlighted Paragraph */}
         <div className={styles.regularParagraphContainer}>
           <h2
             className={`${styles.regularParagraph} text-large`}
@@ -78,14 +74,12 @@ const DetailPage = () => {
           />
         </div>
 
-        {/* Carousel */}
         <div>
           {carouselContent && (
             <Carousel items={carouselContent.items as CarouselItem[]} />
           )}
         </div>
 
-        {/* Last Paragraph */}
         <div className={styles.lastParagraphContainer}>
           <h2
             className={`${styles.lastParagraph} text-large`}

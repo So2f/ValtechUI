@@ -1,27 +1,22 @@
 .container {
   display: flex;
   justify-content: center;
+  margin-top: var(--spacing-xl);
 }
 
 .content {
   max-width: 1196px;
   width: 100%;
-  margin: 0 auto;
-  padding-top: 60px;
 }
 
 .flexRow {
   display: flex;
-}
-
-.backText {
-  margin-left: 10px;
+  gap: 10px;
 }
 
 .authorContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 80px;
   font-style: italic;
 }
 
@@ -31,45 +26,53 @@
   margin: 0 auto;
 }
 
-.highlightedParagraph,
-.regularParagraph,
-.lastParagraph {
-  margin-top: 80px;
+.content > div:not(:last-child) {
+  margin-bottom: var(--spacing-lg);
 }
+
+/* Need to Update the Resp on this page */
 
 @media (max-width: 1024px) {
   .content {
     max-width: 80%;
-    margin: 0 20px;
-  }
-
-  .authorContainer,
-  .regularParagraphContainer,
-  .lastParagraphContainer {
-    font-size: 14px;
   }
 
   .highlightedParagraph {
+    font-size: 18px;
+  }
+
+  .authorContainer {
     font-size: 10px;
+  }
+
+  .regularParagraph,
+  .lastParagraph {
+    font-size: 14px;
+  }
+
+  .regularParagraphContainer,
+  .lastParagraphContainer {
+    max-width: 80%;
   }
 }
 
 @media (max-width: 480px) {
-  .regularParagraphContainer,
-  .lastParagraphContainer {
-    max-width: 80%;
+  .container {
+    margin-top: 30px;
+  }
+
+  .content > div:not(:last-child) {
+    margin-bottom: var(--spacing-md);
   }
 
   .authorContainer,
   .regularParagraph,
   .lastParagraph {
     font-size: 8px;
-    margin-top: 30px;
   }
 
   .highlightedParagraph {
     font-size: 10px;
-    margin-top: 30px;
   }
 
   .flexRow {

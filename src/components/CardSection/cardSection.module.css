@@ -1,34 +1,30 @@
 .cardSection {
-  padding: 0 20px;
-  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
   max-width: 1196px;
-  margin: 120px auto 0;
+  margin: auto;
+  margin-top: var(--spacing-xxl);
 }
 
 .sectionTitle {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: var(--font-size-heading-medium);
+  margin-bottom: var(--spacing-md);
 }
 
 .cardGrid {
+  display: flex;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: var(--spacing-sm);
 }
 
 .card {
   box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 0.3s ease;
   height: 479px;
-  overflow: hidden;
 }
 
 .largeCard {
@@ -45,48 +41,38 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: all 0.4s ease;
   max-width: 225px;
 }
 
-.titleSubtitle {
-  color: black;
-}
-
 .titleSubtitle h3 {
-  font-weight: bold;
-  margin-top: 20px;
+  margin-top: var(--spacing-sm);
 }
 
 .descriptionContainer,
 .buttonContainer {
   opacity: 0;
   max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
   transition:
-    opacity 0.4s ease-out,
+    opacity 0.4s ease-in-out,
     max-height 0.4s ease-in-out,
     margin-top 0.4s ease-in-out;
-  margin-top: 0;
 }
 
 .card:hover .descriptionContainer,
 .card:hover .buttonContainer {
   opacity: 1;
   max-height: 200px;
-  margin-top: 40px;
-}
-
-.cardDescription {
-  color: black;
-  margin: 10px 0;
+  margin-top: var(--spacing-md);
 }
 
 .button {
   width: 225px;
   height: 60px;
-  background-color: #f3f2ef;
+  background-color: var(--color-background);
+  box-sizing: border-box;
   border: 1px solid black;
-  font-size: 14px;
   color: black;
   display: flex;
   text-decoration: none;
@@ -94,12 +80,12 @@
   align-items: center;
   cursor: pointer;
   transition:
-    background-color 0.3s ease,
-    border 0.3s ease;
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
 }
 
 .button:hover {
-  background-color: #ff5959;
+  background-color: var(--color-accent);
   border: none;
 }
 
@@ -108,25 +94,22 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1439px) {
-  .cardGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .cardGrid {
     grid-template-columns: auto;
   }
-
-  .card {
-    width: 100%;
+  .cardSection {
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .sectionTitle {
-    font-size: medium;
+    font-size: 18px;
+  }
+
+  .cardSection {
+    max-width: 90%;
   }
 
   .cardGrid {
@@ -136,12 +119,10 @@
 
   .card {
     height: 200px;
-    padding: 10px;
   }
 
   .cardContent {
-    max-width: 80%;
-    padding: 10px;
+    max-width: 140px;
   }
 
   .card:hover .descriptionContainer,
@@ -162,7 +143,6 @@
 
   .cardDescription {
     font-size: 8px;
-    margin: 0;
   }
 
   .button {
@@ -172,16 +152,6 @@
 
   .buttonContainer {
     margin-top: 5px;
-  }
-
-  .descriptionContainer,
-  .buttonContainer {
-    opacity: 0;
-    max-height: 0;
-    transition:
-      opacity 0.6s ease-out,
-      max-height 0.6s ease-in-out,
-      margin-top 0.6s ease-in-out;
-    margin-top: 0;
+    font-size: 12px;
   }
 }

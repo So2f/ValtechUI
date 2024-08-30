@@ -48,8 +48,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
               src={`${item.url}/png`}
               alt={item.alt}
               width={1195}
-              height={400}
-              className={styles.carouselImage}
+              height={454}
             />
           </div>
         ))}

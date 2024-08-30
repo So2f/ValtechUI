@@ -1,16 +1,10 @@
 .banner {
-  position: relative;
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  max-height: 560px;
+  margin-top: var(--spacing-xl);
+  color: var(--color-primary);
 }
 
 .bannerContainer {
   position: relative;
-  width: 100%;
   max-width: 1196px;
   height: 560px;
   margin: 0 auto;
@@ -23,8 +17,6 @@
   width: 100%;
   height: 480px;
   transform: translate(-50%, -50%);
-  background-size: cover;
-  background-position: center;
 }
 
 .textContent {
@@ -32,23 +24,15 @@
   bottom: 40px;
   right: 40px;
   text-align: right;
-  color: white;
-}
-
-.textContent h1,
-.textContent p {
-  margin: 0;
-  color: #171717;
-}
-
-.textContent p {
-  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .foregroundImageContainer {
   position: absolute;
   top: 50%;
-  left: 120px;
+  left: var(--spacing-xl);
   width: 345px;
   height: 560px;
   transform: translateY(-50%);
@@ -104,6 +88,12 @@
   .textContent p {
     font-size: 14px;
   }
+
+  .textContent {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -131,12 +121,13 @@
   }
 
   .textContent {
-    bottom: 5px;
-    right: 5px;
+    bottom: 15px;
+    right: 15px;
+    gap: 5px;
   }
 
   .textContent h1 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .textContent p {

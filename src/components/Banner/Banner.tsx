@@ -11,7 +11,7 @@ const Banner = () => {
   if (!heroContent) return null;
 
   return (
-    <section className={styles.banner}>
+    <div className={styles.banner}>
       <div className={styles.bannerContainer}>
         <div
           className={styles.backgroundImage}
@@ -37,7 +37,7 @@ const Banner = () => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

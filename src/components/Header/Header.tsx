@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "../assets/images/valtech.svg";
-import Image from "next/image";
-import styles from "./header.module.css";
+import React from 'react';
+import logo from '../../assets/images/valtech.svg';
+import Image from 'next/image';
+import styles from './header.module.css';
 
 const Header = () => {
   return (

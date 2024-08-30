@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useContent } from "../context/IndexContext";
-import styles from "./footer.module.css";
+import React from 'react';
+import { useContent } from '../../context/IndexContext';
+import styles from './footer.module.css';
 
 const Footer = () => {
   const content = useContent();

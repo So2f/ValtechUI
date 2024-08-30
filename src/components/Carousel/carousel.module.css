@@ -1,8 +1,5 @@
 .carouselContainer {
   position: relative;
-  width: 1195px;
-  height: 400px;
-  margin-top: 80px;
   overflow: hidden;
 }
 
@@ -20,13 +17,11 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
   background: none;
   border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 0;
 }
 
 .leftArrow {
@@ -38,34 +33,19 @@
   transform: translateY(-50%) scaleX(-1);
 }
 
-.carouselImage {
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .descriptionContainer {
   position: absolute;
   bottom: 60px;
   right: 120px;
   color: black;
-  z-index: 2;
   max-width: 580px;
   font-size: 14px;
   text-align: right;
-  opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
 .descriptionContainer.fade-out {
   opacity: 0;
-}
-
-.arrowIcon {
-  width: 100%;
-  height: 100%;
-  fill: black;
 }
 
 @media (max-width: 1440px) {
@@ -77,9 +57,13 @@
 }
 
 @media (max-width: 1024px) {
+  .carouselContainer {
+    height: 300px;
+  }
+
   .descriptionContainer {
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
     font-size: 12px;
     max-width: 400px;
   }
@@ -92,16 +76,17 @@
   }
 
   .descriptionContainer {
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     font-size: 10px;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .carouselContainer .carouselImage {
+  .carouselContainer {
     max-width: 410px;
-    height: 200px;
+    height: 150px;
   }
 
   .carouselContainer {
@@ -114,10 +99,10 @@
   }
 
   .descriptionContainer {
-    bottom: 25px;
-    right: 25px;
-    font-size: 8px;
-    max-width: 180px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 6px;
+    max-width: 150px;
   }
 
   .leftArrow {

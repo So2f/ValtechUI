@@ -1,36 +1,51 @@
-/* Global resets */
+:root {
+  --color-primary: #171717;
+  --color-secondary: #4c4c49;
+  --color-accent: #ff5959;
+  --color-background: #f3f2ef;
+
+  --spacing-xxl: 120px;
+  --spacing-xl: 80px;
+  --spacing-lg: 60px;
+  --spacing-md: 40px;
+  --spacing-sm: 20px;
+
+  --font-family: 'Inter', sans-serif;
+
+  --font-size-heading-large: 32px;
+  --font-size-heading-medium: 32px;
+  --font-size-heading-small: 24px;
+  --font-size-text-large: 20px;
+  --font-size-text-small: 16px;
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: var(--font-family);
 }
 
-/* Typography */
 .heading-large {
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 48px;
 }
 
 .heading-medium {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 32px;
 }
 
 .heading-small {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 24px;
 }
 
 .text-large {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
 }
 
 .text-small {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
 }
