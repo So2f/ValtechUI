@@ -1,5 +1,5 @@
-import React, { createContext, useContext, ReactNode } from "react";
-import articleData from "../data/article.json";
+import React, { createContext, useContext, ReactNode } from 'react';
+import articleData from '../data/article.json';
 
 type ArticleContentType = typeof articleData;
 

@@ -66,6 +66,12 @@
             "url": "https://placehold.co/588x479/D1D3CA/D1D3CA",
             "alt": "Barcelona card image",
             "type": "image"
+          },
+          "cta": {
+            "text": "Explore More",
+            "url": "/article",
+            "ariaLabel": "explore more button",
+            "target": "_blank"
           }
         },
         {

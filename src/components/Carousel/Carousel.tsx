@@ -37,7 +37,6 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
   return (
     <div className={styles.carouselContainer}>
-      {/* Carousel Track */}
       <div
         className={styles.carouselTrack}
         style={{ transform: `translateX(${translateX}%)` }}
@@ -54,7 +53,6 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         ))}
       </div>
 
-      {/* Left Arrow */}
       <button
         onClick={handlePrevClick}
         className={`${styles.arrowButton} ${styles.leftArrow}`}
@@ -62,7 +60,6 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         <Image src={leftArrow} alt="Previous" layout="fill" />
       </button>
 
-      {/* Right Arrow */}
       <button
         onClick={handleNextClick}
         className={`${styles.arrowButton} ${styles.rightArrow}`}
@@ -70,7 +67,6 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         <Image src={rightArrow} alt="Next" layout="fill" />
       </button>
 
-      {/* Description */}
       <div
         className={`${styles.descriptionContainer} ${fadeOut ? styles['fade-out'] : ''}`}
       >

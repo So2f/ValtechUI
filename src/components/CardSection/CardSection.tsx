@@ -3,8 +3,34 @@ import Link from 'next/link';
 import { useContent } from '../../context/IndexContext';
 import styles from './cardSection.module.css';
 
-const CardSection = () => {
-  const { content } = useContent();
+type Card = {
+  title: string;
+  subtitle: string;
+  description: string;
+  backgroundAsset?: {
+    url: string;
+    alt: string;
+  };
+  cta?: {
+    url: string;
+    text: string;
+    ariaLabel: string;
+    target: string;
+  };
+};
+
+type CardGridContent = {
+  type: string;
+  title: string;
+  cards: Card[];
+};
+
+type ContentContextType = {
+  content: CardGridContent[];
+};
+
+const CardSection: React.FC = () => {
+  const { content } = useContent() as ContentContextType;
 
   const cardGridContent = content.find(
     (section) => section.type === 'CARD_GRID'
@@ -27,9 +53,7 @@ const CardSection = () => {
                 isLargeCard ? styles.largeCard : styles.smallCard
               }`}
               style={{
-                backgroundImage: `url(https://placehold.co/${
-                  isLargeCard ? 588 : 284
-                }x479/D1D3CA/D1D3CA)`,
+                backgroundImage: `url(${card.backgroundAsset?.url})`,
               }}
             >
               <div className={styles.cardContent}>
@@ -42,15 +66,17 @@ const CardSection = () => {
                   <p className={styles.cardDescription}>{card.description}</p>
                 </div>
 
-                <div className={styles.buttonContainer}>
-                  <Link
-                    href="/detail"
-                    className={styles.button}
-                    aria-label={`Explore more about ${card.title}`}
-                  >
-                    Explore More
-                  </Link>
-                </div>
+                {card.cta && (
+                  <div className={styles.buttonContainer}>
+                    <Link
+                      href={card.cta.url}
+                      className={styles.button}
+                      aria-label={card.cta.ariaLabel}
+                    >
+                      {card.cta.text}
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           );
