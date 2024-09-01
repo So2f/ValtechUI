@@ -25,12 +25,14 @@ describe('CardSection', () => {
       (section) => section.type === 'CARD_GRID'
     );
 
-    const firstCard = card?.cards[0];
+    const firstCard = card?.cards[0].cta.text;
+
+    console.log('First Card =', firstCard);
 
     const button = screen.getByLabelText(
       `Explore more about ${firstCard.title}`
     );
 
-    expect(button).toHaveAttribute('href', '/detail');
+    expect(button).toHaveAttribute('href', '/article');
   });
 });

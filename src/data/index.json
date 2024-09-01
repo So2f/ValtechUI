@@ -9,12 +9,12 @@
       "subtitle": "Banner subtitle",
       "description": "Welcome to Valtech!",
       "backgroundAsset": {
-        "url": "https://placehold.co/1196x480/F3F2EF/F3F2EF",
+        "url": "https://placehold.co/1196x480/3C3D37/3C3D37",
         "alt": "banner background picture",
         "type": "image"
       },
       "foregroundAsset": {
-        "url": "https://placehold.co/345x560/D1D3CA/D1D3CA",
+        "url": "https://placehold.co/345x560/697565/697565",
         "alt": "banner foreground picture",
         "type": "image"
       }
@@ -46,7 +46,7 @@
           "subtitle": "Germany",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",
           "backgroundAsset": {
-            "url": "https://placehold.co/588x479/D1D3CA/D1D3CA",
+            "url": "https://placehold.co/284x479/D1D3CA/D1D3CA",
             "alt": "Berlin card image",
             "type": "image"
           },
@@ -63,7 +63,7 @@
           "subtitle": "Spain",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",
           "backgroundAsset": {
-            "url": "https://placehold.co/588x479/D1D3CA/D1D3CA",
+            "url": "https://placehold.co/284x479/D1D3CA/D1D3CA",
             "alt": "Barcelona card image",
             "type": "image"
           },
@@ -80,7 +80,7 @@
           "subtitle": "Germany",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",
           "backgroundAsset": {
-            "url": "https://placehold.co/588x479/D1D3CA/D1D3CA",
+            "url": "https://placehold.co/284x479/D1D3CA/D1D3CA",
             "alt": "Berlin card image",
             "type": "image"
           },
@@ -97,7 +97,7 @@
           "subtitle": "Netherlands",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",
           "backgroundAsset": {
-            "url": "https://placehold.co/588x479/D1D3CA/D1D3CA",
+            "url": "https://placehold.co/284x479/D1D3CA/D1D3CA",
             "alt": "Amsterdam card image",
             "type": "image"
           },
