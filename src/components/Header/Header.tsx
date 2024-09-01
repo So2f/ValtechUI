@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import logo from '../../assets/images/valtech.svg';
 import Image from 'next/image';

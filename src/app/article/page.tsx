@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import '../../app/globals.css';
 import Link from 'next/link';
@@ -10,7 +8,6 @@ import DetailBanner from '@/components/DetailBanner/DetailBanner';
 import Arrow from '@/assets/images/arrow.svg';
 import styles from './page.module.css';
 import { CarouselItem } from '@/types/types';
-import Arrow1 from '../../assets/images/Arrow.png';
 
 const DetailPage = () => {
   const articleContent = useArticleContent();
