@@ -27,7 +27,7 @@ const BackgroundImage = styled.div<{ backgroundImage: string }>`
   width: 100%;
   height: 480px;
   transform: translate(-50%, -50%);
-  background-image: url(${rightImage.src});
+  background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   border-radius: 10px;
 `;
@@ -101,7 +101,7 @@ const DetailBanner: React.FC = () => {
 
   return (
     <BannerContainer>
-      <BackgroundImage />
+      <BackgroundImage backgroundImage={rightImage.src} />
       <GlassEffectSide />
       <TextContainer>
         <Subtitle>{heroContent?.subtitle}</Subtitle>

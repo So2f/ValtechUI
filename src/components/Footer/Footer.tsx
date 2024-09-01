@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useContent } from '../../context/IndexContext';
 import styles from './footer.module.css';

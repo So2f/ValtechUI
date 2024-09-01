@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useContent } from '../../context/IndexContext';
 import styled from 'styled-components';
@@ -15,7 +17,7 @@ const BannerContainer = styled.div`
   margin: 0 auto;
 `;
 
-const BackgroundImage = styled.div<{ backgroundImage: string }>`
+const BackgroundImage = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
