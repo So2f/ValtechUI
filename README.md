@@ -7,14 +7,14 @@ This project is the implementation of the Valtech front-end challenge. The appli
 
 <br/>
 <br/>
-<a href="https://so2f.github.io/Valtech/">View Demo .</a>
+<a href="https://so2f.github.io/ValtechUI/">View Demo .</a>
 
 </p>
 </div>
 
 ## About The Project
 
-![Product Screenshot](https://i.postimg.cc/htYgSpTs/screencapture-so2f-github-io-Valtech-2024-08-30-07-59-43.png)
+![Product Screenshot](https://i.postimg.cc/TYcDjnyb/screencapture-so2f-github-io-Valtech-UI-2024-09-02-16-49-00.png)
 
 ## Getting Started
 
